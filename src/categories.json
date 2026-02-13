@@ -1,0 +1,66 @@
+{
+    "incomes": [
+        {
+            "text": "Lön",
+            "value": "salary"
+        },
+        {
+            "text": "Extrainkomster",
+            "value": "extraincome"
+        },
+        {
+            "text": "Bidrag",
+            "value": "benefits"
+        },
+        {
+            "text": "Utdelningar & Räntor",
+            "value": "dividendsInterest"
+        },
+        {
+            "text": "Övrigt",
+            "value": "other"
+        }
+    ],
+    "expenses": [
+        {
+            "text": "Mat & Dryck",
+            "value": "foodBeverage"
+        },
+        {
+            "text": "Transport",
+            "value": "transportation"
+        },
+        {
+            "text": "Boende",
+            "value": "accomodation"
+        },
+        {
+            "text": "Hushåll",
+            "value": "household"
+        },
+        {
+            "text": "Kommunikation",
+            "value": "communication"
+        },
+        {
+            "text": "Fritid & Nöje",
+            "value": "leisure"
+        },
+        {
+            "text": "Hälsa & Skönhet",
+            "value": "healthBeauty"
+        },
+        {
+            "text": "Lån & Krediter",
+            "value": "debt"
+        },
+        {
+            "text": "Sparande",
+            "value": "savings"
+        },
+        {
+            "text": "Övrigt",
+            "value": "other"
+        }
+    ]
+}

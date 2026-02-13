@@ -1,0 +1,13 @@
+@media screen and (min-width: 991px) {
+    main {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 25%;
+    }
+
+    .cancel-btn svg {
+        margin-right: 25%;
+    }
+}
