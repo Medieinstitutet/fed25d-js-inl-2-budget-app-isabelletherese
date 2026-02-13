@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <title>testfed25d-js-inl-2-budget-app-isabelletherese</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <h1>Budgetapp</h1>
+        </header>
+
+        <main>
+            <div class="main-content">
+                <!------------------------------------------->
+                <!------------- TOTAL BALANCE  -------------->
+                <!------------------------------------------->
+
+                <div id="balanceContainer" class="balance-container">
+                    <h2>Din totala balans:</h2>
+                    <span id="totalBalance" class="total-balance">0</span>
+                </div>
+
+                <!------------------------------------------->
+                <!---- RADIOBTNS INCOME / EXPENSE ----------->
+                <!------------------------------------------->
+
+                <div id="budgetType" class="budget-type">
+                    <label>
+                        <button type="button" id="income" value="income"><span>Inkomst</span></button>
+                    </label>
+                    <label>
+                        <button type="button" id="expense" value="expense"><span>Utgift</span></button>
+                    </label>
+                </div>
+
+                <!------------------------------------------->
+                <!------------- INCOME FORM ----------------->
+                <!------------------------------------------->
+
+                <form id="incomeForm" class="income-form hidden">
+                    <button type="button" class="cancel-btn" aria-label="Stäng formulär">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="32px"
+                            viewBox="0 -960 960 960"
+                            width="32px"
+                            fill="#000000"
+                        >
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                            ></path>
+                        </svg>
+                    </button>
+
+                    <h3>Lägg till inkomst</h3>
+
+                    <div class="category-content">
+                        <div class="input-wrapper">
+                            <select id="incomeCategoryDropdown" name="category-list" class="category-input">
+                                <option value="" disabled selected>Välj kategori</option>
+                            </select>
+                            <span class="error-text"></span>
+                        </div>
+                    </div>
+
+                    <label class="desc">
+                        <span
+                            >Beskrivning:<br />
+                            (frivillig)</span
+                        >
+                        <input type="text" id="incomeDescription" class="description-input" />
+                    </label>
+
+                    <div class="amount">
+                        <label for="incomeSum">
+                            <span>Belopp:</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="number" id="incomeSum" class="sum-input" />
+                            <span class="error-text"></span>
+                        </div>
+                    </div>
+
+                    <label class="input-date">
+                        <span>Datum:</span>
+                        <input type="date" id="incomeDate" class="date-input" name="datum" />
+                    </label>
+
+                    <div class="input-submit">
+                        <button type="submit" id="incomeSubmit">Lägg till</button>
+                    </div>
+                </form>
+
+                <!------------------------------------------->
+                <!------------ EXPENSE FORM ----------------->
+                <!------------------------------------------->
+
+                <form id="expenseForm" class="expense-form hidden">
+                    <button type="button" class="cancel-btn" aria-label="Stäng formulär">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="32px"
+                            viewBox="0 -960 960 960"
+                            width="32px"
+                            fill="#000000"
+                            aria-label="hidden"
+                        >
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                            ></path>
+                        </svg>
+                    </button>
+
+                    <h3>Lägg till utgift</h3>
+
+                    <div class="category-content">
+                        <div class="input-wrapper">
+                            <select id="expenseCategoryDropdown" name="category-list" class="category-input">
+                                <option value="" disabled selected>Välj kategori</option>
+                            </select>
+                            <span class="error-text"></span>
+                        </div>
+                    </div>
+
+                    <label class="desc">
+                        <span
+                            >Beskrivning:<br />
+                            (frivillig)</span
+                        >
+                        <input type="text" id="expenseDescription" class="description-input" />
+                    </label>
+
+                    <div class="amount">
+                        <label for="expenseSum">
+                            <span>Belopp:</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="number" id="expenseSum" class="sum-input" />
+                            <span class="error-text"></span>
+                        </div>
+                    </div>
+
+                    <label class="input-date">
+                        <span>Datum:</span>
+                        <input type="date" id="expenseDate" class="date-input" />
+                    </label>
+
+                    <div class="input-submit">
+                        <button type="submit" id="expenseSubmit">Lägg till</button>
+                    </div>
+                </form>
+            </div>
+
+            <!------------------------------------------->
+            <!----------- BUDGET ITEMS DISPLAY ---------->
+            <!------------------------------------------->
+
+            <div id="budgetList" class="budget-list"></div>
+            <div id="data" class="data-list"></div>
+        </main>
+
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
